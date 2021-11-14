@@ -1,16 +1,13 @@
 import React, {FC, PropsWithChildren} from "react";
 import {withAnimationStyles} from './HeightAnimatedContainerStyles';
 
-//Если CSSTransition то надо юзать UnmountTransitionExited в Exited методе
-//Если среди детей AnimatedContainer есть другие AnimatedContainer, то надо передать maxTimeout максимальный таймаут одного из них.
-
 interface SizeState {
     height: number;
     baseHeight: number;
 }
 
 interface MyProps {
-    element?: React.MutableRefObject<HeightAnimatedContainer>;
+    parentHeightAnimatedContainer?: React.MutableRefObject<HeightAnimatedContainer>;
     duration?: number;
     transitionTimingFunction?: string;
 }
@@ -61,8 +58,8 @@ export class HeightAnimatedContainer extends React.Component<PropsWithChildren<M
     }
 
     private transitionStarted = () => {
-        if (this.props.element) {
-            this.props.element.current.forceUpdate();
+        if (this.props.parentHeightAnimatedContainer) {
+            this.props.parentHeightAnimatedContainer.current.forceUpdate();
 
             if (!this.needInnerUpdates)
                 return;
@@ -71,20 +68,20 @@ export class HeightAnimatedContainer extends React.Component<PropsWithChildren<M
             let diff6 = this.duration * 0.6;
             let diff9 = this.duration * 0.9;
             setTimeout(() => {
-                this.props.element.current.forceUpdate();
+                this.props.parentHeightAnimatedContainer.current.forceUpdate();
             }, this.duration - diff9);
             setTimeout(() => {
-                this.props.element.current.forceUpdate();
+                this.props.parentHeightAnimatedContainer.current.forceUpdate();
             }, this.duration - diff6);
             setTimeout(() => {
-                this.props.element.current.forceUpdate();
+                this.props.parentHeightAnimatedContainer.current.forceUpdate();
             }, this.duration - diff3);
         }
     }
 
     private transitionEnded = () => {
-        if (this.props.element) {
-            this.props.element.current.forceUpdate();
+        if (this.props.parentHeightAnimatedContainer) {
+            this.props.parentHeightAnimatedContainer.current.forceUpdate();
         }
     }
 
