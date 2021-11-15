@@ -1,6 +1,8 @@
 ### Demo
 
-See [demo_presentation.gif](https://github.com/AleksanderZverev/HeightAnimatedContainer/blob/master/demo_presentation.gif)
+See the gif [demo_presentation.gif](https://github.com/AleksanderZverev/HeightAnimatedContainer/blob/master/demo_presentation.gif)
+Or youtube [video](https://www.youtube.com/watch?v=IqUgMOFOdsU)
+
 
 ### Usage
 
