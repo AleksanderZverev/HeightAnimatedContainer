@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext",
+        "es2015.promise",
+        "es6"
+      ],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "module": "commonjs",
+      "target": "es6",
+      "jsx": "react",
+      "experimentalDecorators": true,
+      "baseUrl": ".",
+      "paths": {
+              "src/*": [
+                  "src/*"
+              ]
+          }
+    },
+    "exclude": [
+      "./node_modules/**/*"
+    ],
+    "include": [
+      "./src"
+  , "react-app-env.d.ts"  ]
+  }
+  
