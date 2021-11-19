@@ -9,7 +9,7 @@ module.exports = {
     output: {
         publicPath: '/',
         path: path.resolve(__dirname, "./build/"),
-        filename: "bundle.[fullhash].js",
+        filename: "index.js",
     },
 
     devtool: "inline-source-map",

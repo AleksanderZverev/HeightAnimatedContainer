@@ -30,11 +30,13 @@
               ]
           }
     },
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "types": "src",
     "exclude": [
       "./node_modules/**/*"
     ],
-    "include": [
-      "./src"
-  , "react-app-env.d.ts"  ]
+    "include": [ "./src" ]
   }
   
