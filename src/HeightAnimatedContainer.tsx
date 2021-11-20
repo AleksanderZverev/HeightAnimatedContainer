@@ -1,5 +1,4 @@
 import React, {FC, PropsWithChildren} from "react";
-import {withAnimationStyles} from './HeightAnimatedContainerStyles';
 
 interface SizeState {
     height: number;
@@ -98,13 +97,18 @@ export class HeightAnimatedContainer extends React.Component<PropsWithChildren<M
     }
 
     render(): React.ReactNode {
-        const {container} = withAnimationStyles(
-            this.duration, 
-            this.transitionTimingFunction,
-            this.state.height || this.state.baseHeight);
+        const newHeight = this.state.height || this.state.baseHeight;
+        const styles: React.CSSProperties = {
+            overflow: "hidden",
+            transition: `height ${this.duration}ms ${this.transitionTimingFunction}`,
+        }
+
+        if (newHeight) {
+            styles.height = `${newHeight}px`;
+        }
 
         return (
-            <div ref={this.setMainContainer} className={container}>
+            <div ref={this.setMainContainer} style={styles}>
                 <NewCallBackContainer onMounted={this.onChildMounted}>
                     {this.props.children}
                 </NewCallBackContainer>
