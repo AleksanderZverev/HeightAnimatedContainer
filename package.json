@@ -1,6 +1,6 @@
 {
   "name": "react-auto-animated-container",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Plays height transition when children's size changes",
   "main": "build/index.js",
   "scripts": {

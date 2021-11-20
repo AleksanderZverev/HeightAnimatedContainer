@@ -1,7 +1,12 @@
 ### Demo
 
-See the gif [demo_presentation.gif](https://github.com/AleksanderZverev/HeightAnimatedContainer/blob/master/demo_presentation.gif)
-Or youtube [video](https://www.youtube.com/watch?v=IqUgMOFOdsU)
+See on:
+
+[Sandbox](https://codesandbox.io/s/react-auto-animated-container-demo-7bvmv)
+
+[Gif](https://github.com/AleksanderZverev/HeightAnimatedContainer/blob/master/demo_presentation.gif)
+
+[Youtube](https://www.youtube.com/watch?v=IqUgMOFOdsU)
 
 
 ### Usage
